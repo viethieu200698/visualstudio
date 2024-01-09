@@ -1,0 +1,35 @@
+body{
+    background-image: url('../images/pngtree-my-resume-background-material-image_177383.jpg');
+    background-size: cover;
+}
+h1{
+    font-family:Arial,Helvetical,sans-serif;
+    line-height :100px;
+    front: size :100px; 
+    text-align:center; 
+
+}
+h2{
+    line-height :60px;
+    front: size :60px;
+    text-align:center;
+    font-family:Arial,Helvetical,sans-serif;
+    border-bottom:1px solid #291e07;
+}
+h3{
+    line-height :40px;
+    front: size :40px;
+    text-align:center;
+    font-family:Arial,Helvetical,sans-serif;
+    border-bottom:1px solid #291e07;
+   
+}
+h5{
+    color: rgb(73, 73, 79);
+}
+
+p{
+    line-height :40px;
+    front: size :40px;
+    font-family:Arial,Helvetical,sans-serif;
+}
