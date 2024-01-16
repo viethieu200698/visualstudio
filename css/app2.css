@@ -1,0 +1,11 @@
+body{
+   background-image: url('../images/backgroundcv.jpg');
+   background-size: 40%;
+   background-repeat: no-repeat;
+
+}
+img{
+    border-radius: 150%;
+    width: 200px;
+    height: 200px;
+}
