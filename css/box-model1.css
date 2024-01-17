@@ -1,0 +1,17 @@
+.all{
+    float: left;
+    width: calc(50% );
+    margin: 10px 20px 15px 5px;
+}
+.box{
+    float: left;
+    width: calc(50% );
+}
+.box0{
+    max-width: 100%;
+    height: auto;
+}
+.box2{
+    float: right;
+    width: calc(50% );
+}
