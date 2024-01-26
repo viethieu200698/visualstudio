@@ -87,7 +87,7 @@ console.log(rd);
 // cược của ngày hôm đó. (giả sử tỉ lệ là 23đ 1 điểm -> trúng 1 số thì đc 80đ)
 // Sau 7 ngày hãy tính số tiền đã bỏ và số tiền thu được
 
-var st = 0;
+/*var st = 0;
 var dt = 0;
 for(var i=1;i<=7;i++){
     var kq = [];
@@ -113,4 +113,55 @@ var t = 20;
 
 var str = "Năm nay tôi 20 tuổi";
 var str2 = 'Năm nay tôi '+t+' tuổi';
-var str3 = `Năm nay tôi ${t} tuổi`;
+var str3 = `Năm nay tôi ${t} tuổi`; */
+
+function muaVe() {
+    
+    let ve = [];
+    while (ve.length < 6) {
+        let soNgauNhien = Math.floor(Math.random() * 46);
+        if (!ve.includes(soNgauNhien)) {
+            ve.push(soNgauNhien);
+        }
+    }
+    return ve;
+}
+
+function taoBoSoNgauNhien() {
+    
+    let boSoNgauNhien = [];
+    while (boSoNgauNhien.length < 6) {
+        let soNgauNhien = Math.floor(Math.random() * 46);
+        if (!boSoNgauNhien.includes(soNgauNhien)) {
+            boSoNgauNhien.push(soNgauNhien);
+        }
+    }
+    return boSoNgauNhien;
+}
+
+function kiemTraTrungGiai(boSoMua, boSoNgauNhien) {
+    
+    let soGiongNhau = boSoMua.filter(so => boSoNgauNhien.includes(so));
+    
+    if (soGiongNhau.length === 3) {
+        return "Trúng giải 100,000 VND";
+    } else if (soGiongNhau.length === 4) {
+        return "Trúng giải 10,000,000 VND";
+    } else if (soGiongNhau.length === 5) {
+        return "Trúng giải Jackpot (100 tỷ)";
+    } else {
+        return "Không trúng giải";
+    }
+}
+
+
+let boSoMua = muaVe();
+let boSoNgauNhien = taoBoSoNgauNhien();
+
+
+console.log("Vé của bạn:", boSoMua);
+console.log("Bộ số ngẫu nhiên:", boSoNgauNhien);
+
+
+let ketQua = kiemTraTrungGiai(boSoMua, boSoNgauNhien);
+console.log(ketQua);
