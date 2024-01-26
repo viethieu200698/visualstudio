@@ -115,6 +115,7 @@ var str = "Năm nay tôi 20 tuổi";
 var str2 = 'Năm nay tôi '+t+' tuổi';
 var str3 = `Năm nay tôi ${t} tuổi`; */
 
+// bai tap
 function muaVe() {
     
     let ve = [];
