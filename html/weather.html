@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheather</title>
+    <link rel="stylesheet" href="css/layout.css"/>
+</head>
+<body>
+    <section class="section">
+    <div class="container">
+        <h1 id="cityname">tên thành phố</h1>
+        <h2>nhiệt độ<span>20</span><sup>0</sup>C</h2>
+        <h2>độ ẩm<span>70%</span>%</h2>
+        <h2>áp suất<span>1000</span></h2>
+    </div>
+    </section>
+    <script type="text/javascript">
+       var url = "https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric"
+       // step 1 - call api
+       fetch(url).then(json=>json.json())
+       .then(Data=>{
+       //step 2: using JSON (Render data to UI/UX)
+       console.log(data);
+       document.getElementById("cityname").innerText = data.name;
+       document.getElementById("temp").innerText = data.main.temp;
+       document.getElementById("prs").innerText = data.main.pressure;
+       })
+
+       
+
+
+    </script>
+</body>
+</html>
