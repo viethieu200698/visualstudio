@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration and Login Form</title>
+  <title> Bảng điền Thông tin </title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -46,15 +46,24 @@
 
     <div class="mt-3">
       <p>Or login with:</p>
-      <button type="button" class="btn btn-primary mr-2">Facebook</button>
-      <button type="button" class="btn btn-danger">Gmail</button>
+      <button type="button" class="btn btn-primary mr-2" onclick="loginWithFacebook()">Facebook</button>
+      <button type="button" class="btn btn-danger" onclick="loginWithGmail()">Gmail</button>
     </div>
   </div>
 
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+ 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+
+  <script>
+    function loginWithFacebook() {
+      
+      window.location.href = "https://www.facebook.com"; 
+    }
+
+    function loginWithGmail() {
+      
+      window.location.href = "https://mail.google.com"; 
+    }
+  </script>
 </body>
 </html>
